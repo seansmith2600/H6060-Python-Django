@@ -6,11 +6,10 @@ geoip2
 jinja2 >= 2.9.2
 numpy
 Pillow >= 6.2.0
-# pylibmc/libmemcached can't be built on Windows.
-pylibmc; sys.platform != 'win32'
+pylibmc; sys_platform == 'darwin' or sys_platform == 'linux'
 python-memcached >= 1.59
 pytz
-pywatchman; sys.platform != 'win32'
+pywatchman; sys_platform == 'darwin' or sys_platform == 'linux'
 PyYAML
 selenium
 sqlparse >= 0.2.2
